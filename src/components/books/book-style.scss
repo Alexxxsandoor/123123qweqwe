@@ -1,0 +1,17 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    img {
+        height: 300px;
+    }
+}
+
+.card-content {
+    flex-grow: 1;
+}

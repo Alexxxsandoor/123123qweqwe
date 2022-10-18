@@ -1,0 +1,13 @@
+.infoBook {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 60vh;
+    img {
+        max-width: 300px;
+        max-height: 500px;
+    }
+    .info {
+        max-width: 60%;
+    }
+}
