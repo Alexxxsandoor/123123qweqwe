@@ -15,6 +15,8 @@ const BookSlider = (props) => {
         return <h3>Рекомендації за автором</h3>;
       case "recomG":
         return <h3>Рекомендації за жанром</h3>;
+      case "recomT":
+        return <h3>Рекомендації за типом</h3>;
       default:
         break;
     }

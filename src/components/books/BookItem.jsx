@@ -5,7 +5,7 @@ import { BOOK_DB } from "../../db/booksDB";
 import { HISTORY_BOOK_FUNC } from "../../config";
 
 export const BookItem = (props) => {
-  const { id, name, autor, genre, annotation, url, pdf, img } = props;
+  const { id, name, autor, genre, annotation, url, pdf, img, type } = props;
 
   const handleSelect = (id) => {
     const book = BOOK_DB.filter(function (val) {
@@ -23,9 +23,9 @@ export const BookItem = (props) => {
         <span className="card-title">{name}</span>
         <p>{annotation.slice(0, 48)}...</p>
 
-        <p>
-          {autor}/{genre}
-        </p>
+        <p>Автор:{autor}</p>
+        <p>Жанр:{genre}</p>
+        <p>Тип:{type}</p>
       </div>
       <div className="card-action">
         <Link

@@ -3,17 +3,16 @@ import { BOOK_DB } from "../../db/booksDB";
 import "./book-style.scss";
 import BookSlider from "./BookSlider";
 import {
-  filteredArray,
+  filteredArray_history,
   filteredArray_autor,
   filteredArray_genre,
+  filteredArray_type,
 } from "../../config";
 const BooksList = () => {
-  const [historyBook, setHistoryBook] = useState(filteredArray);
+  const [historyBook, setHistoryBook] = useState(filteredArray_history);
   const [recomBookautor, setRecomBookautor] = useState(filteredArray_autor);
   const [recomBookgenre, setRecomBookgenre] = useState(filteredArray_genre);
-
-  console.log(recomBookautor);
-  console.log(recomBookgenre);
+  const [recomBooktype, setRecomBooktype] = useState(filteredArray_type);
 
   return (
     <>
@@ -26,6 +25,9 @@ const BooksList = () => {
       ) : null}
       {!recomBookgenre.length == 0 ? (
         <BookSlider type="recomG" list={recomBookgenre} />
+      ) : null}
+      {!recomBookgenre.length == 0 ? (
+        <BookSlider type="recomT" list={recomBooktype} />
       ) : null}
     </>
   );

@@ -29,6 +29,7 @@ const InfoBook = () => {
               <h2>{book.name}</h2>
               <p>Автор: {book.autor}</p>
               <p>Жанр: {book.genre}</p>
+              <p>Тип: {book.type}</p>
               <h4>ОПИС</h4>
               <p>{book.annotation}</p>
               <a href={book.url} target="_blank">
