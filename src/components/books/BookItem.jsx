@@ -15,7 +15,7 @@ export const BookItem = (props) => {
   };
 
   return (
-    <div className="card col s3">
+    <div className="card col s4">
       <div className="list card-image">
         <img src={img} alt={name} />
       </div>
@@ -30,7 +30,7 @@ export const BookItem = (props) => {
       <div className="card-action">
         <Link
           to={`/book/${id}`}
-          className="btn"
+          className="btn orange"
           onClick={() => {
             scrollUp();
             handleSelect(id);

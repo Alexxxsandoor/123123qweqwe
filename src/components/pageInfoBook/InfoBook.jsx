@@ -32,7 +32,7 @@ const InfoBook = () => {
               <p>Тип: {book.type}</p>
               <h4>ОПИС</h4>
               <p>{book.annotation}</p>
-              <a href={book.url} target="_blank">
+              <a className="btn orange" href={book.url} target="_blank">
                 Читати
               </a>
             </div>
