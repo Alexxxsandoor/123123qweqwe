@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BookItem } from "./BookItem";
 import ItemsCarousel from "react-items-carousel";
+import { Link } from "react-router-dom";
 
 const BookSlider = (props) => {
   const { list, type } = props;
@@ -22,11 +23,19 @@ const BookSlider = (props) => {
     }
   };
 
+  const arr = list;
+
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   return (
     <div style={{ padding: `0 ${chevronWidth}px` }}>
-      {typeSlider(type)}
+      <div className="Title">
+        {typeSlider(type)}
+        <Link to={`/book-list/:${type}`} className="btn">
+          Open all
+        </Link>
+      </div>
+
       <ItemsCarousel
         infiniteLoop
         requestToChangeActive={setActiveItemIndex}

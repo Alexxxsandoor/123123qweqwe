@@ -15,7 +15,7 @@ export const BookItem = (props) => {
   };
 
   return (
-    <div className="card">
+    <div className="card col s3">
       <div className="list card-image">
         <img src={img} alt={name} />
       </div>
